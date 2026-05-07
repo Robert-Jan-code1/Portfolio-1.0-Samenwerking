@@ -9,7 +9,7 @@ Er staat nu een eerste GitHub Pages-prototype klaar:
 - [Website-bestand bekijken](index.html)
 - Verwachte GitHub Pages-link: https://robert-jan-code1.github.io/Portfolio-1.0-Samenwerking/
 
-Ik heb ook een `gh-pages` branch aangemaakt voor publicatie.
+Ik heb ook een `gh-pages` branch aangemaakt voor publicatie en een workflow toegevoegd die probeert GitHub Pages automatisch te activeren.
 
 Als de Pages-link nog 404 geeft, zet GitHub Pages zo aan:
 
