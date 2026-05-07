@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Competentiekompas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="page-header">
+    <div class="header-content">
+      <p class="eyebrow">Halfjaar ontwikkeling</p>
+      <h1>Competentiekompas</h1>
+      <p>
+        Vergelijk je startmeting met je huidige niveau, zie hoe je bent veranderd
+        en maak een persoonlijk ontwikkelingsplan voor de volgende stap.
+      </p>
+      <div class="hero-stats" aria-label="Kernfuncties">
+        <span>Startmeting</span>
+        <span>Huidige meting</span>
+        <span>Groei per competentie</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="app-shell">
+    <nav class="app-nav" aria-label="Applicatie onderdelen">
+      <button class="nav-button" type="button" data-target="file-analysis">Bestandsanalyse</button>
+      <button class="nav-button active" type="button" data-target="assessment">Beoordeling</button>
+      <button class="nav-button" type="button" data-target="results">Resultaten</button>
+      <button class="nav-button" type="button" data-target="plan">Ontwikkelingsplan</button>
+      <button class="nav-button" type="button" data-target="report-section">Rapport</button>
+    </nav>
+
+    <section class="intro-section" aria-labelledby="intro-title">
+      <h2 id="intro-title">Hoe werkt het?</h2>
+      <div class="intro-grid">
+        <article>
+          <span class="step-number">1</span>
+          <h3>Leg het begin vast</h3>
+          <p>Vul in hoe elke competentie aan het begin van het halfjaar scoorde.</p>
+        </article>
+        <article>
+          <span class="step-number">2</span>
+          <h3>Meet waar je nu staat</h3>
+          <p>Vergelijk de huidige score met de startscore.</p>
+        </article>
+        <article>
+          <span class="step-number">3</span>
+          <h3>Bekijk je ontwikkeling</h3>
+          <p>De app toont groei, terugval, sterke punten en aandachtspunten.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="panel file-panel app-section" id="file-analysis" aria-labelledby="file-title">
+      <div class="section-heading">
+        <h2 id="file-title">Bestand analyseren</h2>
+        <p>Upload een tekst-, CSV-, Markdown- of JSON-bestand. De app zoekt bewijs per competentie en vult de begin- en huidige score automatisch in.</p>
+      </div>
+
+      <div class="file-upload-box">
+        <label class="file-input-label" for="evidence-file">
+          Bestand toevoegen
+          <input id="evidence-file" type="file" accept=".txt,.csv,.json,.md,text/plain,text/csv,application/json" multiple>
+        </label>
+        <button class="secondary-button" id="clear-file-button" type="button">Analyse wissen</button>
+      </div>
+
+      <p class="file-hint">
+        Tip: hoe concreter het bestand beschrijft wat iemand eerst deed, nu doet, feedback kreeg of heeft verbeterd, hoe beter de automatische inschatting.
+      </p>
+
+      <div id="file-status" class="file-status" aria-live="polite">
+        Nog geen bestand geanalyseerd.
+      </div>
+      <div id="file-insights" class="file-insights">
+        <!-- Automatische bestandsanalyse komt hier. -->
+      </div>
+    </section>
+
+    <section class="panel form-panel app-section" id="assessment" aria-labelledby="scores-title">
+      <div class="section-heading">
+        <h2 id="scores-title">Start en huidige score</h2>
+        <p>Vul per competentie twee scores in: begin van het halfjaar en nu.</p>
+      </div>
+
+      <div class="progress-card" aria-live="polite">
+        <span id="progress-label">0 van 6 competenties beoordeeld</span>
+        <div class="progress-track">
+          <span id="progress-fill"></span>
+        </div>
+      </div>
+
+      <form id="score-form">
+        <!-- De competenties en scoreknoppen worden met JavaScript opgebouwd. -->
+      </form>
+
+      <div class="button-row">
+        <button class="primary-button" id="results-button" type="button">Bekijk ontwikkeling</button>
+        <button class="secondary-button" id="reset-button" type="button">Reset</button>
+      </div>
+    </section>
+
+    <section class="panel chart-panel app-section" aria-labelledby="chart-title">
+      <div class="section-heading">
+        <h2 id="chart-title">Spiderplot ontwikkeling</h2>
+        <p>Startmeting en huidige meting in een grafiek.</p>
+      </div>
+      <div class="chart-legend">
+        <span><i class="legend-dot start-dot"></i>Begin</span>
+        <span><i class="legend-dot current-dot"></i>Nu</span>
+      </div>
+      <div class="chart-frame" id="radar-chart" aria-live="polite">
+        <!-- De SVG-radargrafiek wordt met JavaScript getekend. -->
+      </div>
+    </section>
+
+    <section class="panel results-panel app-section" id="results" aria-labelledby="analysis-title">
+      <div class="section-heading">
+        <h2 id="analysis-title">Resultaten en groei</h2>
+        <p id="result-status">Automatische indeling op basis van de huidige score en verandering.</p>
+      </div>
+      <div id="zero-alert" class="zero-alert" hidden></div>
+      <div id="growth-summary" class="growth-summary">
+        <!-- Groei-indicatoren worden met JavaScript opgebouwd. -->
+      </div>
+      <div id="analysis-results" class="result-grid">
+        <!-- Sterke punten, ontwikkelpunten en zwakke punten komen hier. -->
+      </div>
+    </section>
+
+    <section class="panel plan-panel app-section" id="plan" aria-labelledby="plan-title">
+      <div class="section-heading">
+        <h2 id="plan-title">Persoonlijk ontwikkelingsplan</h2>
+        <p>Kies concrete acties voor competenties die aandacht verdienen.</p>
+      </div>
+      <div id="development-plan">
+        <!-- Ontwikkelacties worden na de analyse opgebouwd. -->
+      </div>
+    </section>
+
+    <section class="panel report-panel app-section" id="report-section" aria-labelledby="report-title">
+      <div class="section-heading">
+        <h2 id="report-title">Rapportoverzicht</h2>
+        <p>Samenvatting van de startmeting, huidige meting, groei en ontwikkelacties.</p>
+      </div>
+      <div id="report">
+        <!-- Het rapport wordt na het klikken op de resultatenknop gevuld. -->
+      </div>
+      <button class="secondary-button save-pdf-button" id="save-pdf-button" type="button">Opslaan als PDF</button>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
