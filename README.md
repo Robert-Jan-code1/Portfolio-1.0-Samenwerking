@@ -1,0 +1,13 @@
+# Portfolio 1.0 Samenwerking
+
+Deze repository is bedoeld om het portfolio-project samen via GitHub te volgen.
+
+## Werkwijze
+
+- Ideeën, afspraken en updates kunnen in `codex-log.md` worden gezet.
+- Bestanden die Codex maakt of aanpast kunnen hier worden opgeslagen.
+- Groepsleden kunnen de wijzigingen zien via commits, bestanden, issues of pull requests.
+
+## Belangrijk
+
+De Codex-chat zelf wordt niet live gedeeld op GitHub. Wat gedeeld moet worden, moet als bestand, issue of pull request in deze repository worden geplaatst.
