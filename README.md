@@ -9,9 +9,11 @@ Er staat nu een eerste GitHub Pages-prototype klaar:
 - [Website-bestand bekijken](index.html)
 - Verwachte GitHub Pages-link: https://robert-jan-code1.github.io/Portfolio-1.0-Samenwerking/
 
-Als de Pages-link nog niet werkt, zet GitHub Pages aan via:
+Ik heb ook een `gh-pages` branch aangemaakt voor publicatie.
 
-Settings > Pages > Build and deployment > GitHub Actions.
+Als de Pages-link nog 404 geeft, zet GitHub Pages zo aan:
+
+Settings > Pages > Build and deployment > Deploy from a branch > `gh-pages` > `/root` > Save.
 
 Laatste Pages-update: 2026-05-07.
 
