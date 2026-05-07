@@ -11,7 +11,9 @@ Er staat nu een eerste GitHub Pages-prototype klaar:
 
 Als de Pages-link nog niet werkt, zet GitHub Pages aan via:
 
-Settings > Pages > Build and deployment > Deploy from a branch > `main` > `/root` > Save.
+Settings > Pages > Build and deployment > GitHub Actions.
+
+Laatste Pages-update: 2026-05-07.
 
 ## Belangrijkste documenten
 
