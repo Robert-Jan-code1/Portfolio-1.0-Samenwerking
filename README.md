@@ -2,6 +2,17 @@
 
 Deze repository is bedoeld om het portfolio-project samen via GitHub te volgen.
 
+## Website prototype
+
+Er staat nu een eerste GitHub Pages-prototype klaar:
+
+- [Website-bestand bekijken](index.html)
+- Verwachte GitHub Pages-link: https://robert-jan-code1.github.io/Portfolio-1.0-Samenwerking/
+
+Als de Pages-link nog niet werkt, zet GitHub Pages aan via:
+
+Settings > Pages > Build and deployment > Deploy from a branch > `main` > `/root` > Save.
+
 ## Belangrijkste documenten
 
 - [Website-opzet portfolio](docs/website-opzet-portfolio.md)
