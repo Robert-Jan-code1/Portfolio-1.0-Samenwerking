@@ -12,3 +12,5 @@ Gebruik dit bestand om korte updates uit Codex met het groepje te delen.
 - Extra workflows toegevoegd voor Pages-deploy en automatische Pages-activatie: `.github/workflows/pages.yml` en `.github/workflows/enable-pages.yml`.
 - Verwachte website-link: https://robert-jan-code1.github.io/Portfolio-1.0-Samenwerking/
 - Als de link nog 404 geeft, moet GitHub Pages eenmalig worden ingesteld op: Settings > Pages > Deploy from a branch > `gh-pages` > `/root` > Save.
+- Website interactief gemaakt met een editorbalk: `Bewerk website`, `Opslaan`, `Exporteren`, `Importeren` en `Reset`.
+- Inhoud kan nu direct op de pagina worden aangepast en wordt lokaal in de browser opgeslagen. Met `Exporteren` kan de inhoud als `portfolio-inhoud.json` worden bewaard, zodat die later definitief in GitHub verwerkt kan worden.
