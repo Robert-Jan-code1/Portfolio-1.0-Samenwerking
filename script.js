@@ -1,4 +1,4 @@
-const storageKey = 'minor-ce-portfolio-content-v2';
+const storageKey = 'minor-ce-portfolio-content-v3';
 const editToggle = document.querySelector('#editToggle');
 const saveButton = document.querySelector('#saveEdits');
 const exportButton = document.querySelector('#exportData');
@@ -10,24 +10,24 @@ const defaultData = {
   fields: {
     brandText: 'Portfolio Robert-Jan Laan',
     heroEyebrow: 'Minor Circulaire Economie',
-    heroTitle: 'Portfolio assessment: mijn werk, keuzes en groei als circulaire professional',
-    heroCopy: 'Deze portfolio laat mijn eigen bijdrage zien aan onderwijsproducten, opdrachtontwikkeling, projectbegeleiding en zelfontwikkelde AI-hulpmiddelen zoals de vakantieplanner, afstudeerbegeleider en groenbeheerbegeleider.',
+    heroTitle: 'Assessmentportfolio: beroepsproducten, eigenaarschap en groei',
+    heroCopy: 'In dit portfolio laat ik zien welke producten ik zelf heb ontwikkeld, welke keuzes ik daarin heb gemaakt en hoe ik ben gegroeid als circulaire professional. De nadruk ligt op praktijkwaarde, professionele redenering, reflectie en mijn eigen rol.',
     introOneTitle: 'Beroepsproducten met praktijkwaarde',
-    introOneText: 'Ik toon concrete producten die gebruikt kunnen worden in onderwijs, opdrachtvorming, begeleiding, planning en groenbeheer.',
-    introTwoTitle: 'Eigenaarschap zichtbaar',
-    introTwoText: 'Per project beschrijf ik mijn rol, gemaakte keuzes, onderbouwing en wat ik zelf heb ontwikkeld of opgeleverd.',
+    introOneText: 'Mijn bewijs bestaat uit concrete producten voor onderwijs, opdrachtontwikkeling, projectbegeleiding en zelfontwikkelde AI-hulpmiddelen.',
+    introTwoTitle: 'Eigenaarschap scherp zichtbaar',
+    introTwoText: 'Per project benoem ik mijn eigen bijdrage, mijn ontwerpkeuzes en wat ik inhoudelijk kan verdedigen bij kritische vragen.',
     introThreeTitle: 'Reflectie en ontwikkeling',
-    introThreeText: 'Ik verbind mijn ervaringen aan circulair denken, professioneel handelen, AI-gebruik en mijn ontwikkeling binnen de minor.',
+    introThreeText: 'Ik verbind mijn producten aan circulair denken, professioneel handelen, verantwoord AI-gebruik en mijn ontwikkeling tijdens de minor.',
     projectsTitle: 'Projecten en eigen bijdrage',
-    projectsIntro: 'De projecten hieronder vormen de kern van mijn bewijsmateriaal. Per project staat wat het vraagstuk was, welke rol ik had en welk resultaat ik heb opgeleverd.',
-    processTitle: 'Proceslijn',
-    processIntro: 'Deze proceslijn laat zien hoe ik van losse vraagstukken naar bruikbare beroepsproducten, begeleidingsvormen en AI-hulpmiddelen ben gekomen.',
+    projectsIntro: 'Deze projecten vormen de kern van mijn bewijsmateriaal. Ik laat per onderdeel zien wat het vraagstuk was, wat mijn rol was en welke waarde het product of proces oplevert.',
+    processTitle: 'Mijn werkwijze',
+    processIntro: 'Mijn proces laat zien hoe ik van een vraagstuk naar een bruikbaar product ben gegaan, en hoe ik mijn keuzes onderweg heb aangescherpt.',
     productsTitle: 'Beroepsproducten',
     productsIntro: 'Deze producten gebruik ik als bewijs voor professionele kwaliteit, eigenaarschap, reflectie en groei als circulaire professional.',
     learningTitle: 'Leerproces en reflectie',
     learningIntro: 'Mijn leerproces laat zien hoe ik steeds bewuster ben gaan werken vanuit circulariteit, praktijkwaarde, eigenaarschap en verantwoord gebruik van AI.',
     evidenceTitle: 'Beoordelingsbewijs per criterium',
-    evidenceIntro: 'Deze matrix koppelt de vijf criteria uit het assessment direct aan de plekken waar het bewijs in mijn portfolio staat.',
+    evidenceIntro: 'Deze matrix koppelt de vijf assessmentcriteria direct aan mijn bewijsmateriaal en mijn toelichting tijdens het gesprek.',
     footerText: 'Portfolio Minor Circulaire Economie - Robert-Jan Laan'
   },
   projects: [
@@ -36,32 +36,34 @@ const defaultData = {
       title: 'Wormenhotel-lesprogramma',
       text: 'Ik heb een lesprogramma ontwikkeld voor leerlingen van 12-14 jaar rondom duurzaamheid, circulariteit en klimaat. De kernvraag is hoe organisch afval kan worden omgezet in iets waardevols voor de natuur. Het eindproduct is een werkend wormenhotel dat leerlingen bouwen, onderhouden, monitoren en gebruiken.',
       points: [
-        'Eigen product: lesprogramma met visie, leerdoelen, fases, werkvormen en formatieve beoordeling.',
-        'Circulaire waarde: afval wordt benaderd als onderdeel van een kringloop in plaats van als eindpunt.',
-        'Praktijkwaarde: inzetbaar voor onderbouw VO/Agora, met ruimte voor onderzoek, ontwerp, logboek en reflectie.',
-        'Onderbouwing: gekoppeld aan eigenaarschap, klimaatbewust handelen, bodem, biodiversiteit en voedselketen.'
+        'Mijn bijdrage: ik werkte het programma uit met visie, leerdoelen, projectfases, werkvormen en formatieve beoordeling.',
+        'Professionele keuze: ik koos voor leren door doen, omdat leerlingen circulariteit sterker begrijpen wanneer zij de kringloop zelf ervaren.',
+        'Praktijkwaarde: het programma is inzetbaar in onderbouw VO/Agora en koppelt afval, bodem, biodiversiteit, klimaat en verantwoordelijkheid.',
+        'Assessmentwaarde: toont inhoudelijke samenhang, doelgroepgericht ontwerpen en een concreet beroepsproduct.'
       ],
       featured: true
     },
     {
       label: 'Project 2',
       title: 'Handleiding wormenhotel bouwen',
-      text: 'Als vervolg op het lesprogramma heb ik een praktische handleiding gemaakt met drie manieren om een wormenhotel te bouwen: met emmers, opbergbakken of een houten kist. Daarmee is het concept niet alleen inhoudelijk uitgewerkt, maar ook uitvoerbaar gemaakt.',
+      text: 'Als vervolg op het lesprogramma heb ik een praktische handleiding gemaakt met drie manieren om een wormenhotel te bouwen: met emmers, opbergbakken of een houten kist. Daardoor is het lesidee ook praktisch uitvoerbaar.',
       points: [
-        'Eigen product: korte bouwinstructie met benodigdheden, stappen en visuele opbouw.',
-        'Keuze: meerdere varianten toegevoegd zodat scholen kunnen kiezen op basis van materiaal, niveau en beschikbare middelen.',
-        'Praktijkwaarde: leerlingen en begeleiders kunnen direct starten met bouwen.'
+        'Mijn bijdrage: ik vertaalde het concept naar materialen, stappen en bouwvarianten.',
+        'Professionele keuze: meerdere varianten maken het product bruikbaar voor verschillende budgetten, materialen en begeleidingsniveaus.',
+        'Praktijkwaarde: leerlingen en begeleiders kunnen direct starten met bouwen en leren door experimenteren.',
+        'Reflectiepunt: veiligheid, onderhoud en continuïteit moeten in uitvoering goed begeleid worden.'
       ],
       featured: false
     },
     {
       label: 'Project 3',
       title: 'Sjabloon opdrachtbrief voor de minor',
-      text: 'Ik heb een opdrachtbrief-sjabloon gemaakt waarmee toekomstige opdrachtgevers hun opdracht duidelijker kunnen formuleren. Het sjabloon helpt om doel, aanleiding, eindproducten, planning, communicatie en randvoorwaarden vooraf scherp te krijgen.',
+      text: 'Ik heb een opdrachtbrief-sjabloon gemaakt waarmee toekomstige opdrachtgevers hun opdracht duidelijker kunnen formuleren. Het sjabloon helpt om doel, aanleiding, eindproducten, planning, communicatie, randvoorwaarden en gewenste impact vooraf scherp te krijgen.',
       points: [
-        'Eigen product: structuur voor opdrachtgevers en minorbegeleiders.',
-        'Professionele waarde: betere intake van opdrachten, realistischer verwachtingen en duidelijkere deadlines.',
-        'Keuze: focus op concrete uitvoerbaarheid, impact, studentvaardigheden en wederzijdse ondersteuning.'
+        'Mijn bijdrage: ik ontwierp een vaste structuur voor opdrachtgever, studententeam en minorbegeleider.',
+        'Professionele keuze: ik legde nadruk op concrete uitvoerbaarheid, deadlines, contactmomenten en verwachtingen.',
+        'Praktijkwaarde: de minor kan hiermee opdrachten beter beoordelen voordat studenten starten.',
+        'Assessmentwaarde: toont dat ik niet alleen uitvoer, maar ook processen rond opdrachtkwaliteit kan verbeteren.'
       ],
       featured: false
     },
@@ -70,20 +72,22 @@ const defaultData = {
       title: 'Begeleiding bodemverzuringsproject',
       text: 'Voor het project over zure bodems in Nederland heb ik gefunctioneerd als opdrachtgever en begeleider. Ik hielp een groep om het vraagstuk te vertalen naar een onderzoekbare opdracht en gaf tussentijdse beoordeling op product, proces en professionele communicatie.',
       points: [
-        'Rol: begeleider/opdrachtgever namens het vraagstuk rond bodemverzuring.',
+        'Mijn rol: begeleider/opdrachtgever namens het vraagstuk rond bodemverzuring.',
         'Bewijs: tussentijdse beoordeling van 27-05-2026 met feedback op projectopzet, voorstudie en proces.',
-        'Professionele houding: aandacht voor initiatief, diepgang, communicatie en verplaatsen in de probleemeigenaar.'
+        'Professionele keuze: ik keek niet alleen naar inhoud, maar ook naar initiatief, communicatie en verplaatsen in de probleemeigenaar.',
+        'Leerwaarde: dit project laat zien dat ik ook vanuit een begeleidende en beoordelende positie kan werken.'
       ],
       featured: false
     },
     {
       label: 'Project 5',
       title: 'ChatGPT-vakantieplanner',
-      text: 'Ik heb een vakantieplanner ontwikkeld in ChatGPT. Dit product laat zien hoe ik AI heb ingezet om een praktisch planningsvraagstuk te structureren, keuzes inzichtelijk te maken en gebruikers stapsgewijs te begeleiden naar een passend plan.',
+      text: 'Ik heb een vakantieplanner ontwikkeld in ChatGPT. Dit product laat zien hoe ik AI heb ingezet om een praktisch planningsvraagstuk te structureren, keuzes inzichtelijk te maken en gebruikers stap voor stap te begeleiden naar een passend plan.',
       points: [
-        'Eigen ontwikkeling: een AI-hulpmiddel dat informatie ordent en vertaalt naar een concreet plan.',
-        'Professionele waarde: laat zien dat ik digitale tools kan ontwerpen voor gebruiksgemak, planning en besluitvorming.',
-        'Nog aanvullen: doelgroep, belangrijkste functies, voorbeeldoutput en welke ontwerpkeuzes ik bewust heb gemaakt.'
+        'Mijn bijdrage: ik ontwierp de gespreksstructuur, keuzevragen en manier waarop informatie wordt vertaald naar een concreet plan.',
+        'Professionele keuze: de planner moet eerst behoefte, randvoorwaarden en voorkeuren ophalen voordat hij advies geeft.',
+        'Praktijkwaarde: het hulpmiddel ondersteunt planning, overzicht en besluitvorming.',
+        'Reflectiepunt: AI-output moet gecontroleerd worden op haalbaarheid, actualiteit en aannames.'
       ],
       featured: false
     },
@@ -92,9 +96,10 @@ const defaultData = {
       title: 'ChatGPT-afstudeerbegeleider',
       text: 'Ik heb een afstudeerbegeleider ontwikkeld in ChatGPT. Dit hulpmiddel is bedoeld om structuur, richting en reflectie te geven tijdens een afstudeerproces, bijvoorbeeld bij planning, onderzoeksvragen, feedbackverwerking en voortgang.',
       points: [
-        'Eigen ontwikkeling: een begeleidende AI-omgeving voor studie- en onderzoeksprocessen.',
-        'Professionele waarde: ondersteunt eigenaarschap, structuur en kritische vragen tijdens een complex traject.',
-        'Nog aanvullen: hoe de begeleider werkt, welke problemen hij oplost en hoe ik kwaliteit/bruikbaarheid heb getest.'
+        'Mijn bijdrage: ik ontwierp een begeleidende AI-omgeving die studenten helpt om hun proces te ordenen.',
+        'Professionele keuze: de begeleider geeft niet alleen antwoorden, maar stelt ook kritische vragen over doel, methode, planning en bewijs.',
+        'Praktijkwaarde: ondersteunt eigenaarschap, voortgang en reflectie bij een complex studieproces.',
+        'Assessmentwaarde: toont dat ik begeleiding kan vertalen naar een digitaal hulpmiddel met duidelijke leerfunctie.'
       ],
       featured: false
     },
@@ -103,35 +108,40 @@ const defaultData = {
       title: 'ChatGPT-begeleider groenbeheer Moscowa',
       text: 'Ik heb een begeleider ontwikkeld rond groenbeheer van Moscowa. Dit is een belangrijk hoofdproduct waarin ik veel werk heb gestoken. Het laat zien hoe ik informatie over groenbeheer kan structureren en vertalen naar begeleiding, analyse of advies.',
       points: [
-        'Eigen ontwikkeling: een AI-hulpmiddel gericht op groenbeheer en stedelijke leefomgeving.',
-        'Circulaire relevantie: koppeling mogelijk met biodiversiteit, klimaatadaptatie, openbare ruimte en duurzaam beheer.',
-        'Nog aanvullen: precieze context, doelgroep, functies, gebruikte bronnen/afwegingen en voorbeelden van output.'
+        'Mijn bijdrage: ik bouwde een AI-hulpmiddel rond groenbeheer, stedelijke leefomgeving en praktische begeleiding.',
+        'Circulaire relevantie: het product kan worden gekoppeld aan biodiversiteit, klimaatadaptatie, openbare ruimte en duurzaam beheer.',
+        'Professionele keuze: de begeleider moet informatie ordenen en helpen om keuzes voor beheer beter te onderbouwen.',
+        'Assessmentwaarde: dit is een hoofdproduct waarmee ik verdieping, digitale ontwikkeling en circulair professioneel denken kan laten zien.'
       ],
       featured: false
     }
   ],
   process: [
     {
-      title: 'Vraagstuk scherp maken',
-      text: 'Ik begon steeds bij de vraag achter de opdracht: welk probleem moet worden opgelost, voor wie is het relevant en welke circulaire of professionele waarde kan het opleveren? Dat gold voor onderwijs, opdrachtontwikkeling, projectbegeleiding en AI-hulpmiddelen.'
+      title: '1. Vraagstuk en waarde bepalen',
+      text: 'Ik begon bij de vraag: welk probleem moet worden opgelost, voor wie is het relevant en welke duurzame of professionele waarde kan het opleveren? Zo werd afval een onderwijsbare kringloop, opdrachtintake een procesverbetering en groenbeheer een onderwerp voor gestructureerde AI-begeleiding.'
     },
     {
-      title: 'Vertalen naar bruikbare producten',
-      text: 'Ik heb ideeën omgezet naar producten die anderen kunnen gebruiken: een lesprogramma, een bouwinstructie, een opdrachtbrief, een beoordelingsmoment en AI-hulpmiddelen voor planning, begeleiding en groenbeheer.'
+      title: '2. Vertalen naar bruikbare vorm',
+      text: 'Ik heb ideeën omgezet naar producten die anderen kunnen gebruiken: een lesprogramma, een bouwinstructie, een opdrachtbrief, een beoordelingsrol en AI-hulpmiddelen voor planning, afstuderen en groenbeheer.'
     },
     {
-      title: 'Keuzes onderbouwen',
-      text: 'Mijn keuzes draaiden om uitvoerbaarheid, doelgroep, leerwaarde en gebruiksgemak. Bij de AI-hulpmiddelen moet ik vooral laten zien waarom ik bepaalde functies, vragen en structuur heb gekozen.'
+      title: '3. Keuzes expliciet maken',
+      text: 'Mijn keuzes draaiden om uitvoerbaarheid, doelgroep, leerwaarde, gebruiksgemak en professionele betrouwbaarheid. Bij de AI-hulpmiddelen hoort daar ook bij dat ik kritisch kijk naar aannames, controleerbaarheid en de rol van de gebruiker.'
     },
     {
-      title: 'Reflecteren en aanscherpen',
-      text: 'In mijn reflectie moet ik expliciet maken wat goed werkte, welke aannames ik had en wat ik anders zou doen. Vooral de koppeling tussen productkwaliteit, praktijkwaarde, AI-gebruik en mijn eigen professionele ontwikkeling moet scherp worden.'
+      title: '4. Toepassen en beoordelen',
+      text: 'Ik keek steeds of het product echt bruikbaar is in de praktijk. Bij het wormenhotel betekent dat bouwen en onderhouden; bij de opdrachtbrief duidelijke afspraken; bij bodemverzuring feedback op proces; bij AI-hulpmiddelen bruikbare begeleiding en controleerbare output.'
+    },
+    {
+      title: '5. Reflecteren en doorontwikkelen',
+      text: 'Voor het assessment verbind ik elk product aan wat ik heb geleerd: waar mijn aanpak sterk was, welke aannames of beperkingen erin zitten en hoe ik deze ervaring meeneem in toekomstig professioneel handelen.'
     }
   ],
   products: [
     {
       title: 'Wormenhotel-lesprogramma',
-      text: 'Bewijs voor professionele kwaliteit: uitgewerkt onderwijsprogramma met achtergrond, leerdoelen, hoofvraag, projectfases, monitoring, reflectie en formatieve beoordeling.'
+      text: 'Bewijs voor professionele kwaliteit: uitgewerkt onderwijsprogramma met achtergrond, leerdoelen, hoofdvraag, projectfases, monitoring, reflectie en formatieve beoordeling.'
     },
     {
       title: 'Wormenhotelbouw-handleiding',
@@ -158,53 +168,57 @@ const defaultData = {
       text: 'Bewijs voor verdieping: een hoofdproduct rond groenbeheer waarin ik AI inzet om informatie, analyse en begeleiding te structureren.'
     },
     {
-      title: 'Nog toevoegen: reflectiedocument',
-      text: 'Belangrijk voor maximale score: voeg een persoonlijk reflectiedocument toe waarin ik per criterium mijn keuzes, aannames, beperkingen, leerproces en toekomstige handelen onderbouw.'
+      title: 'Assessmenttoelichting',
+      text: 'Tijdens het assessment licht ik per product toe wat mijn eigen bijdrage was, welke keuzes ik heb gemaakt, welke beperkingen ik zie en hoe het product waarde heeft voor praktijk of vraagstuk.'
     }
   ],
   learning: [
     {
-      title: 'Van idee naar toepasbaarheid',
-      text: 'Ik heb geleerd dat circulaire economie pas sterk wordt als een idee praktisch uitvoerbaar wordt. Het wormenhotel laat dit zien: leerlingen ervaren een kringloop door zelf te bouwen, te verzorgen en te reflecteren.'
+      title: 'Van circulair idee naar gedrag',
+      text: 'Door het wormenhotel leerde ik dat circulariteit sterker wordt wanneer mensen het kunnen doen en ervaren. Afval wordt dan geen abstract begrip, maar onderdeel van een zichtbare kringloop.'
     },
     {
-      title: 'Professioneler opdrachtdenken',
-      text: 'Door het opdrachtbrief-sjabloon ben ik kritischer gaan kijken naar wat een goede opdracht nodig heeft: doel, context, eindproducten, planning, communicatie, randvoorwaarden en gewenste impact.'
+      title: 'Van losse opdracht naar professionele intake',
+      text: 'Door de opdrachtbrief ben ik kritischer gaan kijken naar opdrachtkwaliteit. Een goed duurzaam project vraagt niet alleen een interessant thema, maar ook duidelijke doelen, rolverdeling, randvoorwaarden en contactmomenten.'
     },
     {
-      title: 'Eigenaarschap nemen',
-      text: 'In het bodemverzuringsproject nam ik een andere positie in: niet alleen maker, maar ook begeleider/opdrachtgever. Dat vroeg om duidelijke feedback, professionele communicatie en denken vanuit de probleemeigenaar.'
+      title: 'Van maker naar begeleider',
+      text: 'Bij het bodemverzuringsproject nam ik een andere positie in: ik was niet alleen uitvoerder, maar ook begeleider/opdrachtgever. Dat vroeg om afstand nemen, feedback geven en denken vanuit de probleemeigenaar.'
     },
     {
       title: 'AI als professioneel hulpmiddel',
-      text: 'Met de vakantieplanner, afstudeerbegeleider en groenbeheerbegeleider heb ik onderzocht hoe AI kan helpen om complexe informatie praktisch, begeleidend en bruikbaar te maken. Voor het assessment moet ik mijn ontwerpkeuzes en kwaliteitscontrole helder uitleggen.'
+      text: 'Met de vakantieplanner, afstudeerbegeleider en groenbeheerbegeleider heb ik onderzocht hoe AI complexe informatie praktisch en begeleidend kan maken. Ik heb daarbij geleerd dat de waarde niet alleen in output zit, maar vooral in goede vragen, structuur en controle.'
+    },
+    {
+      title: 'Toekomstig handelen',
+      text: 'Ik neem mee dat ik in toekomstige projecten eerder mijn aannames expliciet wil maken, bewijs wil verzamelen tijdens het proces en digitale hulpmiddelen wil toetsen op betrouwbaarheid, bruikbaarheid en maatschappelijke waarde.'
     }
   ],
   evidence: [
     {
       criterion: '1. Beroepsproducten',
-      location: 'Wormenhotel-lesprogramma, bouw-handleiding, opdrachtbrief-sjabloon, bodemverzuring, vakantieplanner, afstudeerbegeleider en groenbeheerbegeleider.',
-      status: 'Sterk, nog toelichten'
+      location: 'Alle zeven projecten tonen concrete producten of rollen: lesprogramma, handleiding, opdrachtbrief, bodemverzuring, vakantieplanner, afstudeerbegeleider en groenbeheerbegeleider.',
+      status: 'Bewijs aanwezig'
     },
     {
       criterion: '2. Eigenaarschap',
-      location: 'Per project: mijn rol, mijn keuzes, mijn bijdrage en wat ik kan verdedigen bij doorvragen. Bij de AI-producten expliciet maken wat ik zelf heb ontworpen.',
-      status: 'Prioriteit'
+      location: 'Per project staat mijn bijdrage, keuze en rol benoemd. In het gesprek moet ik vooral de AI-producten en het groenbeheer Moscowa scherp kunnen toelichten.',
+      status: 'Hoogste prioriteit'
     },
     {
       criterion: '3. Reflectie',
-      location: 'Leerproces en reflectiedocument: sterke/zwakke punten, aannames, beperkingen, AI-betrouwbaarheid en gevolgen voor toepasbaarheid.',
-      status: 'Nog aanvullen'
+      location: 'Leerproces en assessmenttoelichting benoemen sterke punten, aannames, beperkingen, AI-betrouwbaarheid en toepasbaarheid.',
+      status: 'Mondeling verdiepen'
     },
     {
       criterion: '4. Leerproces',
-      location: 'Proceslijn en leerproces: waarom ik deze opdrachten en AI-hulpmiddelen koos en hoe vrijheid/eigen regie mijn ontwikkeling stuurden.',
-      status: 'Nog verdiepen'
+      location: 'Proceslijn en leerproces laten zien waarom ik deze opdrachten oppakte en hoe mijn rol verschoof van maker naar begeleider en ontwerper van hulpmiddelen.',
+      status: 'Bewijs aanwezig'
     },
     {
       criterion: '5. Groei circulaire professional',
-      location: 'Leerproces: ontwikkeling in circulair denken, GreenComp, waardenreflectie, toekomstscenario’s, groenbeheer en toekomstig professioneel handelen.',
-      status: 'Nog koppelen'
+      location: 'Wormenhotel, bodemverzuring en groenbeheer Moscowa tonen groei in circulair denken; opdrachtbrief en AI-producten tonen groei in professioneel handelen.',
+      status: 'Goed koppelen'
     }
   ]
 };
