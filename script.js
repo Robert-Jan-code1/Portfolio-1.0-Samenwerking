@@ -7,40 +7,160 @@ const resetButton = document.querySelector('#resetEdits');
 const statusText = document.querySelector('#editorStatus');
 
 const defaultData = {
-  fields: {},
+  fields: {
+    brandText: 'Portfolio Robert-Jan Laan',
+    heroEyebrow: 'Minor Circulaire Economie',
+    heroTitle: 'Portfolio assessment: mijn werk, keuzes en groei als circulaire professional',
+    heroCopy: 'Deze portfolio laat mijn eigen bijdrage zien aan drie onderdelen: het wormenhotel-lesprogramma, de opdrachtbrief voor toekomstige minoropdrachten en mijn rol als begeleider/opdrachtgever bij het bodemverzuringsproject.',
+    introOneTitle: 'Beroepsproducten met praktijkwaarde',
+    introOneText: 'Ik toon concrete producten die gebruikt kunnen worden in onderwijs, opdrachtvorming en projectbegeleiding.',
+    introTwoTitle: 'Eigenaarschap zichtbaar',
+    introTwoText: 'Per project beschrijf ik mijn rol, gemaakte keuzes, onderbouwing en wat ik zelf heb opgeleverd.',
+    introThreeTitle: 'Reflectie en ontwikkeling',
+    introThreeText: 'Ik verbind mijn ervaringen aan circulair denken, professionele houding en mijn ontwikkeling binnen de minor.',
+    projectsTitle: 'Projecten en eigen bijdrage',
+    projectsIntro: 'De projecten hieronder vormen de kern van mijn bewijsmateriaal. Per project staat wat het vraagstuk was, welke rol ik had en welk resultaat ik heb opgeleverd.',
+    processTitle: 'Proceslijn',
+    processIntro: 'Deze proceslijn laat zien hoe ik van losse vraagstukken naar bruikbare beroepsproducten en professionele keuzes ben gekomen.',
+    productsTitle: 'Beroepsproducten',
+    productsIntro: 'Deze producten gebruik ik als bewijs voor professionele kwaliteit, eigenaarschap, reflectie en groei als circulaire professional.',
+    learningTitle: 'Leerproces en reflectie',
+    learningIntro: 'Mijn leerproces laat zien hoe ik steeds bewuster ben gaan werken vanuit circulariteit, praktijkwaarde en eigenaarschap.',
+    evidenceTitle: 'Beoordelingsbewijs per criterium',
+    evidenceIntro: 'Deze matrix koppelt de vijf criteria uit het assessment direct aan de plekken waar het bewijs in mijn portfolio staat.',
+    footerText: 'Portfolio Minor Circulaire Economie - Robert-Jan Laan'
+  },
   projects: [
     {
       label: 'Project 1',
-      title: 'Titel van opdracht',
-      text: 'Voeg hier later het vraagstuk, de opdrachtgever, jouw rol en het belangrijkste resultaat toe.',
-      points: ['Vraagstuk en context', 'Jouw bijdrage', 'Proces en keuzes', 'Bewijs voor beoordeling'],
+      title: 'Wormenhotel-lesprogramma',
+      text: 'Ik heb een lesprogramma ontwikkeld voor leerlingen van 12-14 jaar rondom duurzaamheid, circulariteit en klimaat. De kernvraag is hoe organisch afval kan worden omgezet in iets waardevols voor de natuur. Het eindproduct is een werkend wormenhotel dat leerlingen bouwen, onderhouden, monitoren en gebruiken.',
+      points: [
+        'Eigen product: lesprogramma met visie, leerdoelen, fases, werkvormen en formatieve beoordeling.',
+        'Circulaire waarde: afval wordt benaderd als onderdeel van een kringloop in plaats van als eindpunt.',
+        'Praktijkwaarde: inzetbaar voor onderbouw VO/Agora, met ruimte voor onderzoek, ontwerp, logboek en reflectie.',
+        'Onderbouwing: gekoppeld aan eigenaarschap, klimaatbewust handelen, bodem, biodiversiteit en voedselketen.'
+      ],
       featured: true
     },
-    { label: 'Project 2', title: 'Nog toe te voegen', text: 'Plek voor een tweede opdracht, casus of groepsproject.', points: [] },
-    { label: 'Project 3', title: 'Nog toe te voegen', text: 'Plek voor een derde opdracht of verdiepende activiteit.', points: [] }
+    {
+      label: 'Project 2',
+      title: 'Handleiding wormenhotel bouwen',
+      text: 'Als vervolg op het lesprogramma heb ik een praktische handleiding gemaakt met drie manieren om een wormenhotel te bouwen: met emmers, opbergbakken of een houten kist. Daarmee is het concept niet alleen inhoudelijk uitgewerkt, maar ook uitvoerbaar gemaakt.',
+      points: [
+        'Eigen product: korte bouwinstructie met benodigdheden, stappen en visuele opbouw.',
+        'Keuze: meerdere varianten toegevoegd zodat scholen kunnen kiezen op basis van materiaal, niveau en beschikbare middelen.',
+        'Praktijkwaarde: leerlingen en begeleiders kunnen direct starten met bouwen.'
+      ],
+      featured: false
+    },
+    {
+      label: 'Project 3',
+      title: 'Sjabloon opdrachtbrief voor de minor',
+      text: 'Ik heb een opdrachtbrief-sjabloon gemaakt waarmee toekomstige opdrachtgevers hun opdracht duidelijker kunnen formuleren. Het sjabloon helpt om doel, aanleiding, eindproducten, planning, communicatie en randvoorwaarden vooraf scherp te krijgen.',
+      points: [
+        'Eigen product: structuur voor opdrachtgevers en minorbegeleiders.',
+        'Professionele waarde: betere intake van opdrachten, realistischer verwachtingen en duidelijkere deadlines.',
+        'Keuze: focus op concrete uitvoerbaarheid, impact, studentvaardigheden en wederzijdse ondersteuning.'
+      ],
+      featured: false
+    },
+    {
+      label: 'Project 4',
+      title: 'Begeleiding bodemverzuringsproject',
+      text: 'Voor het project over zure bodems in Nederland heb ik gefunctioneerd als opdrachtgever en begeleider. Ik hielp een groep om het vraagstuk te vertalen naar een onderzoekbare opdracht en gaf tussentijdse beoordeling op product, proces en professionele communicatie.',
+      points: [
+        'Rol: begeleider/opdrachtgever namens het vraagstuk rond bodemverzuring.',
+        'Bewijs: tussentijdse beoordeling van 27-05-2026 met feedback op projectopzet, voorstudie en proces.',
+        'Professionele houding: aandacht voor initiatief, diepgang, communicatie en verplaatsen in de probleemeigenaar.'
+      ],
+      featured: false
+    }
   ],
   process: [
-    { title: 'Vraagstuk begrijpen', text: "Wat is de uitdaging, welke belangen spelen mee en welke kansen of risico's zie je?" },
-    { title: 'Onderzoeken en analyseren', text: 'Welke methode gebruikte je, welke data verzamelde je en welke patronen ontdekte je?' },
-    { title: 'Richting kiezen', text: 'Welke opties heb je verkend en waarom paste de gekozen richting het best?' },
-    { title: 'Valideren en verbeteren', text: 'Welke feedback kreeg je van stakeholders en wat heb je daarmee aangepast?' }
+    {
+      title: 'Vraagstuk scherp maken',
+      text: 'Ik begon steeds bij de vraag achter de opdracht: welk probleem moet worden opgelost, voor wie is het relevant en welke circulaire waarde kan het opleveren? Bij het wormenhotel werd dat afval als grondstof; bij de opdrachtbrief werd dat betere opdrachtkwaliteit; bij bodemverzuring werd dat een onderzoekbare richting.'
+    },
+    {
+      title: 'Vertalen naar bruikbare producten',
+      text: 'Ik heb ideeën omgezet naar producten die anderen kunnen gebruiken: een lesprogramma, een bouwinstructie, een opdrachtbrief en een beoordelingsmoment voor leerlingen. Daarmee laat ik zien dat mijn werk verder gaat dan een theoretisch idee.'
+    },
+    {
+      title: 'Keuzes onderbouwen',
+      text: 'Mijn keuzes draaiden om uitvoerbaarheid, doelgroep en leerwaarde. Ik koos bijvoorbeeld voor meerdere bouwvarianten bij het wormenhotel en voor vaste onderdelen in de opdrachtbrief, zodat opdrachtgevers en studenten vooraf minder onduidelijkheid hebben.'
+    },
+    {
+      title: 'Reflecteren en aanscherpen',
+      text: 'In mijn reflectie moet ik expliciet maken wat goed werkte, welke aannames ik had en wat ik anders zou doen. Vooral de koppeling tussen productkwaliteit, praktijkwaarde en mijn eigen professionele ontwikkeling moet ik nog scherp formuleren.'
+    }
   ],
   products: [
-    { title: 'Transitieplan', text: 'Status: nog toevoegen. Leg uit waarom het professioneel bruikbaar is voor de opdrachtgever.' },
-    { title: 'Analyse en modellen', text: 'Status: nog toevoegen. Koppel elk model aan inzichten en keuzes.' },
-    { title: 'Presentatie of workshop', text: 'Status: nog toevoegen. Laat zien hoe interactie en validatie hebben plaatsgevonden.' }
+    {
+      title: 'Wormenhotel-lesprogramma',
+      text: 'Bewijs voor professionele kwaliteit: uitgewerkt onderwijsprogramma met achtergrond, leerdoelen, hoofvraag, projectfases, monitoring, reflectie en formatieve beoordeling.'
+    },
+    {
+      title: 'Wormenhotelbouw-handleiding',
+      text: 'Bewijs voor praktische uitvoerbaarheid: drie bouwopties met benodigdheden, stappen en bronnen. Dit maakt het lesprogramma concreet toepasbaar.'
+    },
+    {
+      title: 'Sjabloon opdrachtbrief',
+      text: 'Bewijs voor professioneel redeneren: een hulpmiddel waarmee de minor toekomstige opdrachten scherper kan beoordelen en structureren voordat studenten starten.'
+    },
+    {
+      title: 'Tussentijdse beoordeling bodemverzuring',
+      text: 'Bewijs voor professionele rolname: ik trad op als opdrachtgever/begeleider en gaf inhoudelijke feedback op projectopzet, voorstudie, proces en communicatie.'
+    },
+    {
+      title: 'Nog toevoegen: reflectiedocument',
+      text: 'Belangrijk voor maximale score: voeg een persoonlijk reflectiedocument toe waarin ik per criterium mijn keuzes, aannames, beperkingen, leerproces en toekomstige handelen onderbouw.'
+    }
   ],
   learning: [
-    { title: 'Situatie', text: 'Welke ervaring, opdracht of feedbackmoment was belangrijk?' },
-    { title: 'Keuze', text: 'Wat deed jij bewust en waarom koos je daarvoor?' },
-    { title: 'Inzicht', text: 'Wat heb je geleerd over jezelf, samenwerking of duurzaamheid?' },
-    { title: 'Vervolg', text: 'Wat neem je mee naar je volgende project of professionele rol?' }
+    {
+      title: 'Van idee naar toepasbaarheid',
+      text: 'Ik heb geleerd dat circulaire economie pas sterk wordt als een idee praktisch uitvoerbaar wordt. Het wormenhotel laat dit zien: leerlingen ervaren een kringloop door zelf te bouwen, te verzorgen en te reflecteren.'
+    },
+    {
+      title: 'Professioneler opdrachtdenken',
+      text: 'Door het opdrachtbrief-sjabloon ben ik kritischer gaan kijken naar wat een goede opdracht nodig heeft: doel, context, eindproducten, planning, communicatie, randvoorwaarden en gewenste impact.'
+    },
+    {
+      title: 'Eigenaarschap nemen',
+      text: 'In het bodemverzuringsproject nam ik een andere positie in: niet alleen maker, maar ook begeleider/opdrachtgever. Dat vroeg om duidelijke feedback, professionele communicatie en denken vanuit de probleemeigenaar.'
+    },
+    {
+      title: 'Nog scherper maken',
+      text: 'Voor het assessment moet ik mijn reflectie verdiepen: welke aannames had ik, waar zaten beperkingen in mijn producten en hoe vertaal ik deze ervaringen naar mijn toekomstige professionele handelen?'
+    }
   ],
   evidence: [
-    { criterion: 'Professionele kwaliteit', location: "Beroepsproducten en projectpagina's", status: 'Open' },
-    { criterion: 'Eigenaarschap', location: 'Jouw rol, keuzes en toelichting per project', status: 'Open' },
-    { criterion: 'Reflectie', location: 'Leerproces en reflectiepagina', status: 'Open' },
-    { criterion: 'Groei als circulaire professional', location: 'Ontwikkeling, GreenComp en toekomstig handelen', status: 'Open' }
+    {
+      criterion: '1. Beroepsproducten',
+      location: 'Wormenhotel-lesprogramma, bouw-handleiding, opdrachtbrief-sjabloon en beoordeling bodemverzuring. Leg per product uit welke praktijkwaarde het heeft.',
+      status: 'Sterk, nog toelichten'
+    },
+    {
+      criterion: '2. Eigenaarschap',
+      location: 'Per project: mijn rol, mijn keuzes, mijn bijdrage en wat ik kan verdedigen bij doorvragen. Vooral expliciet maken wat ik zelf heb gemaakt.',
+      status: 'Prioriteit'
+    },
+    {
+      criterion: '3. Reflectie',
+      location: 'Leerproces en reflectiedocument: sterke/zwakke punten, aannames, beperkingen en gevolgen voor toepasbaarheid.',
+      status: 'Nog aanvullen'
+    },
+    {
+      criterion: '4. Leerproces',
+      location: 'Proceslijn en leerproces: waarom ik deze opdrachten koos en hoe vrijheid/eigen regie mijn ontwikkeling stuurden.',
+      status: 'Nog verdiepen'
+    },
+    {
+      criterion: '5. Groei circulaire professional',
+      location: 'Leerproces: ontwikkeling in circulair denken, GreenComp, waardenreflectie, toekomstscenario’s en toekomstig professioneel handelen.',
+      status: 'Nog koppelen'
+    }
   ]
 };
 
@@ -123,7 +243,7 @@ function renderCards(containerId, items, collection) {
 
 function renderEvidence() {
   const list = document.querySelector('#evidenceList');
-  list.innerHTML = '<div class="table-row table-head" role="row"><span role="columnheader">Criterium</span><span role="columnheader">Waar komt bewijs?</span><span role="columnheader">Status</span></div>';
+  list.innerHTML = '<div class="table-row table-head" role="row"><span role="columnheader">Criterium</span><span role="columnheader">Waar staat het bewijs?</span><span role="columnheader">Status</span></div>';
   portfolioData.evidence.forEach((item, index) => {
     const row = document.createElement('div');
     row.className = 'table-row';
