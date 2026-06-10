@@ -100,8 +100,8 @@ const defaultData = {
     },
     {
       label: 'Project 7',
-      title: 'ChatGPT-begeleider groenbeheer Moskou',
-      text: 'Ik heb een begeleider ontwikkeld rond groenbeheer van Moskou. Dit is een belangrijk hoofdproduct waarin ik veel werk heb gestoken. Het laat zien hoe ik informatie over groenbeheer kan structureren en vertalen naar begeleiding, analyse of advies.',
+      title: 'ChatGPT-begeleider groenbeheer Moscowa',
+      text: 'Ik heb een begeleider ontwikkeld rond groenbeheer van Moscowa. Dit is een belangrijk hoofdproduct waarin ik veel werk heb gestoken. Het laat zien hoe ik informatie over groenbeheer kan structureren en vertalen naar begeleiding, analyse of advies.',
       points: [
         'Eigen ontwikkeling: een AI-hulpmiddel gericht op groenbeheer en stedelijke leefomgeving.',
         'Circulaire relevantie: koppeling mogelijk met biodiversiteit, klimaatadaptatie, openbare ruimte en duurzaam beheer.',
@@ -154,7 +154,7 @@ const defaultData = {
       text: 'Bewijs voor begeleiding en structuur: een AI-hulpmiddel dat studenten kan helpen bij onderzoek, planning, reflectie en voortgang in een afstudeerproces.'
     },
     {
-      title: 'ChatGPT-begeleider groenbeheer Moskou',
+      title: 'ChatGPT-begeleider groenbeheer Moscowa',
       text: 'Bewijs voor verdieping: een hoofdproduct rond groenbeheer waarin ik AI inzet om informatie, analyse en begeleiding te structureren.'
     },
     {
